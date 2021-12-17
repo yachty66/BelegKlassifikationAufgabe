@@ -11,7 +11,11 @@ object NaiveBayes {
    * @return A Map with the attribute name as the key and the number of distinct
    *         values as the value
    */
-  def countAttributeValues(data:List[Map[String, Any]], attribList:String): Map[Any,Int]= ???
+  def countAttributeValues(data:List[Map[String, Any]], attribList:String): Map[Any,Int]= {
+    //data.map(x => x("class")) --> from every Map in List get the value of the key "class"
+    //groupBy(l => l).map(t => (t._1, t._2.length)) --> group by occurence
+    data.map(x => x(attribList)).groupBy(l => l).map(t => (t._1, t._2.length))
+  }
 
   /**
    * Extracts all attribute names that occur in a data set
@@ -19,7 +23,11 @@ object NaiveBayes {
    * @param data    Data Set to be searched
    * @return A List of the attribute names that appear in the data set
    */
-  def getAttributes(data:List[Map[String, Any]]):Set[String]= ???
+  def getAttributes(data:List[Map[String, Any]]):Set[String]= {
+    //get every key and flatten to a list. at the end convert set to list.
+    data.map(x => x.keySet).flatten.toSet
+  }
+
 
   /**
    * Extracts all attribute values that occur in a data set.
@@ -29,10 +37,9 @@ object NaiveBayes {
    *         The attribute values are stored in a Set.
    */
   def getAttributeValues(data:List[Map[String, Any]]):Map[String,Set[Any]]={
-
-    val attribs= getAttributes(data)
-    attribs.map(a => (a,data.map(_(a)).groupBy(identity).keys.toSet)).
-      toMap
+    //was already implemented
+    val attribs = getAttributes(data)
+    attribs.map(a => (a,data.map(_(a)).groupBy(identity).keys.toSet)).toMap
   }
 
   /**
@@ -43,7 +50,12 @@ object NaiveBayes {
    * @return A Map that consists of all classes (as key) and their corresponding prior propabilities.
    *
    */
-  def calcPriorPropabilities(data:List[Map[String, Any]], classAttrib:String):Map[Any,Double]= ???
+  def calcPriorPropabilities(data:List[Map[String, Any]], classAttrib:String):Map[Any,Double]= {
+    //counts how often a attribute value occurs
+    val attribs = countAttributeValues(data, classAttrib)
+    //go through map and return value from 0 index and value from index 1 converted to double divided by the sum off all values converted to double to get probability
+    attribs.map(x => (x._1, x._2.toDouble/attribs.foldLeft(0)(_+_._2).toDouble))
+  }
 
   /**
    * This function should count for each class and attribute how often an

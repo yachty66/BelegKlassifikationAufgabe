@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a1fbee-444d-4da8-bc67-885536ec1cda" name="Default Changelist" comment="" />
+    <list default="true" id="92a1fbee-444d-4da8-bc67-885536ec1cda" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/titanic/NaiveBayes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/titanic/NaiveBayes.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,10 +22,29 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Worksheet" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="22PPnvQFFsYiXFJgHV9RNbtY7sL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,10 +52,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="ScalaTest.NaiveBayesTest">
+  <component name="RunManager" selected="ScalaTest.NaiveBayesTest.Calc PriorPropablities">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -58,15 +86,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NaiveBayesTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="NaiveBayesTest.Calc PriorPropablities" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="BelegKlassifikationAufgabe" />
       <option name="allowRunningInParallel" value="false" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="testKind" value="Class" />
+      <option name="testKind" value="Test name" />
       <option name="testClassPath" value="test.NaiveBayesTest" />
+      <option name="testName" value="Calc PriorPropablities" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NaiveBayesTest.Count Day" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="BelegKlassifikationAufgabe" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="test.NaiveBayesTest" />
+      <option name="testName" value="Count Day" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NaiveBayesTest.Get Attribute Values" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="BelegKlassifikationAufgabe" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="test.NaiveBayesTest" />
+      <option name="testName" value="Get Attribute Values" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NaiveBayesTest.Get Attributes with missing Value" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="BelegKlassifikationAufgabe" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="test.NaiveBayesTest" />
+      <option name="testName" value="Get Attributes with missing Value" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NaiveBayesTest.Get Attributes" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="BelegKlassifikationAufgabe" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="test.NaiveBayesTest" />
+      <option name="testName" value="Get Attributes" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -74,11 +163,19 @@
     </configuration>
     <list>
       <item itemvalue="sbt Task.run" />
-      <item itemvalue="ScalaTest.NaiveBayesTest" />
+      <item itemvalue="ScalaTest.NaiveBayesTest.Count Day" />
+      <item itemvalue="ScalaTest.NaiveBayesTest.Get Attributes" />
+      <item itemvalue="ScalaTest.NaiveBayesTest.Get Attributes with missing Value" />
+      <item itemvalue="ScalaTest.NaiveBayesTest.Get Attribute Values" />
+      <item itemvalue="ScalaTest.NaiveBayesTest.Calc PriorPropablities" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="ScalaTest.NaiveBayesTest" />
+        <item itemvalue="ScalaTest.NaiveBayesTest.Calc PriorPropablities" />
+        <item itemvalue="ScalaTest.NaiveBayesTest.Get Attribute Values" />
+        <item itemvalue="ScalaTest.NaiveBayesTest.Get Attributes" />
+        <item itemvalue="ScalaTest.NaiveBayesTest.Get Attributes with missing Value" />
+        <item itemvalue="ScalaTest.NaiveBayesTest.Count Day" />
       </list>
     </recent_temporary>
   </component>
@@ -90,11 +187,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639736420082</updated>
-      <workItem from="1639736421722" duration="195000" />
+      <workItem from="1639736421722" duration="9004000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
