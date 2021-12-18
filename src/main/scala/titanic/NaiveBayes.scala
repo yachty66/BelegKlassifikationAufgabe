@@ -73,7 +73,48 @@ object NaiveBayes {
    *
    */
   def calcAttribValuesForEachClass(data:List[Map[String, Any]], classAttrib:String):
-            Map[Any, Set[(String, Map[Any, Int])]] = ???
+            Map[Any, Set[(String, Map[Any, Int])]] = {
+    //late, cancled, very late, on time
+    //late --> season -> winter -> 2
+    //i get all rows with an certain attribute like late
+    //Ich muss jedes vorkommen der in der zeile auftauchenden attribute zählrn und auflisten
+    //println(data.map(x => x.groupBy(classAttrib)) )
+    print((data.filter(_.contains(classAttrib)).map(m => m(classAttrib) -> (m - classAttrib).toList).foldLeft(Map.empty[Any, Map[(String, Any)]]){
+      case (acc, (key, values)) if acc.contains(key) =>
+        acc.updated(key, acc(key) ++ values).toMap
+      case (acc, (key, values)) =>
+        (acc + (Map(key.asInstanceOf[String], values))).toMap
+    }))
+
+
+
+    Map("late" -> Set(("season",Map("winter" -> 2)), ("rain",Map("none" -> 1, "heavy" -> 1)),
+      ("wind",Map("normal" -> 1, "high" -> 1)), ("day",Map("saturday" -> 1, "weekday" -> 1))))
+
+
+  }
+  val trainDataSet= List(
+    Map[String,String]("day"-> "weekday", "season"->"spring", "wind"->"none", "rain"->"none", "class"->"on time"),
+    Map[String,String]("day"-> "weekday", "season"->"winter", "wind"->"none", "rain"->"slight", "class"->"on time"),
+    Map[String,String]("day"-> "weekday", "season"->"winter", "wind"->"none", "rain"->"slight", "class"->"on time"),
+    Map[String,String]("day"-> "weekday", "season"->"winter", "wind"->"high", "rain"->"heavy", "class"->"late"),
+    Map[String,String]("day"-> "saturday", "season"->"summer", "wind"->"normal", "rain"->"none", "class"->"on time"),
+    Map[String,String]("day"-> "weekday", "season"->"autumn", "wind"->"normal", "rain"->"none", "class"->"very late"),
+    Map[String,String]("day"-> "holiday", "season"->"summer", "wind"->"high", "rain"->"slight", "class"->"on time"),
+    Map[String,String]("day"-> "sunday", "season"->"summer", "wind"->"normal", "rain"->"none", "class"->"on time"),
+    Map[String,String]("day"-> "weekday", "season"->"winter", "wind"->"high", "rain"->"heavy", "class"->"very late"),
+    Map[String,String]("day"-> "weekday", "season"->"summer", "wind"->"none", "rain"->"slight", "class"->"on time"),
+    Map[String,String]("day"-> "saturday", "season"->"spring", "wind"->"high", "rain"->"heavy", "class"->"cancled"),
+    Map[String,String]("day"-> "weekday", "season"->"summer", "wind"->"high", "rain"->"slight", "class"->"on time"),
+    Map[String,String]("day"-> "saturday", "season"->"winter", "wind"->"normal", "rain"->"none", "class"->"late"),
+    Map[String,String]("day"-> "weekday", "season"->"summer", "wind"->"high", "rain"->"none", "class"->"on time"),
+    Map[String,String]("day"-> "weekday", "season"->"winter", "wind"->"normal", "rain"->"heavy", "class"->"very late"),
+    Map[String,String]("day"-> "saturday", "season"->"autumn", "wind"->"high", "rain"->"slight", "class"->"on time"),
+    Map[String,String]("day"-> "weekday", "season"->"autumn", "wind"->"none", "rain"->"heavy", "class"->"on time"),
+    Map[String,String]("day"-> "holiday", "season"->"spring", "wind"->"normal", "rain"->"slight", "class"->"on time"),
+    Map[String,String]("day"-> "weekday", "season"->"spring", "wind"->"normal", "rain"->"none", "class"->"on time"),
+    Map[String,String]("day"-> "weekday", "season"->"spring", "wind"->"normal", "rain"->"slight", "class"->"on time")
+  )
 
   /**
    * This function should calculate the conditional propabilities for each class and attribute.
