@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a1fbee-444d-4da8-bc67-885536ec1cda" name="Default Changelist" comment="backup">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/titanic/NaiveBayes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/titanic/NaiveBayes.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/test/NaiveBayesTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/test/NaiveBayesTest.scala" afterDir="false" />
-    </list>
+    <list default="true" id="92a1fbee-444d-4da8-bc67-885536ec1cda" name="Default Changelist" comment="6 done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -190,7 +186,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639736420082</updated>
       <workItem from="1639736421722" duration="31031000" />
-      <workItem from="1639907607476" duration="5622000" />
+      <workItem from="1639907607476" duration="6031000" />
     </task>
     <task id="LOCAL-00001" summary="backup">
       <created>1639757279310</created>
@@ -206,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639864436934</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="6 done">
+      <created>1639915195500</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639915195500</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +229,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="backup" />
+    <MESSAGE value="6 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 done" />
   </component>
 </project>
