@@ -113,7 +113,7 @@ class NaiveBayesTest extends AnyFunSuite {
     val classVals= NaiveBayes.countAttributeValues(trainDataSet,"class")
     val data= NaiveBayes.calcAttribValuesForEachClass(trainDataSet,"class")
     val res = NaiveBayes.calcConditionalPropabilitiesForEachClass(data,classVals)
-      .asInstanceOf[ Map[Any, Set[(String, Map[Any, Any])]]]
+      .asInstanceOf[Map[Any, Set[(String, Map[Any, Any])]]]
     val resext= NaiveBayes.extractValues(res).asInstanceOf[Set[(String,String,Double)]].toList.sorted
 
     val exp= Map("late" -> Set(("season",Map("winter" -> 1.0)), ("rain",Map("none" -> 0.5, "heavy" -> 0.5)),
