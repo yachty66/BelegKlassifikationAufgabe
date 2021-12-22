@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a1fbee-444d-4da8-bc67-885536ec1cda" name="Default Changelist" comment="6 done" />
+    <list default="true" id="92a1fbee-444d-4da8-bc67-885536ec1cda" name="Default Changelist" comment="6 done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/titanic/NaiveBayes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/titanic/NaiveBayes.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,16 +59,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="ScalaTest.NaiveBayesTest.Calculate Conditional Propabilities For Each Class">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="ScalaTest.NaiveBayesTest.Calc Class Values with Conditional Propablilities">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -80,6 +81,21 @@
       <option name="useSbtShell" value="true" />
       <option name="vmparams" value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled" />
       <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NaiveBayesTest.Calc Class Values with Conditional Propablilities" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="BelegKlassifikationAufgabe" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="test.NaiveBayesTest" />
+      <option name="testName" value="Calc Class Values with Conditional Propablilities" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NaiveBayesTest.Count Attribute Values for Each class" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="NaiveBayesTest.Find best fitting class" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="BelegKlassifikationAufgabe" />
       <option name="allowRunningInParallel" value="false" />
       <option name="projectPathOnTarget" />
@@ -123,13 +139,13 @@
       </option>
       <option name="testKind" value="Test name" />
       <option name="testClassPath" value="test.NaiveBayesTest" />
-      <option name="testName" value="Count Attribute Values for Each class" />
+      <option name="testName" value="Find best fitting class" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NaiveBayesTest.Get Attribute Values" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="NaiveBayesTest.apply Model One" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="BelegKlassifikationAufgabe" />
       <option name="allowRunningInParallel" value="false" />
       <option name="projectPathOnTarget" />
@@ -138,22 +154,7 @@
       </option>
       <option name="testKind" value="Test name" />
       <option name="testClassPath" value="test.NaiveBayesTest" />
-      <option name="testName" value="Get Attribute Values" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NaiveBayesTest.Get Attributes" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="BelegKlassifikationAufgabe" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="testKind" value="Test name" />
-      <option name="testClassPath" value="test.NaiveBayesTest" />
-      <option name="testName" value="Get Attributes" />
+      <option name="testName" value="apply Model One" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,19 +162,19 @@
     </configuration>
     <list>
       <item itemvalue="sbt Task.run" />
-      <item itemvalue="ScalaTest.NaiveBayesTest.Get Attributes" />
-      <item itemvalue="ScalaTest.NaiveBayesTest.Get Attribute Values" />
       <item itemvalue="ScalaTest.NaiveBayesTest.Calc PriorPropablities" />
-      <item itemvalue="ScalaTest.NaiveBayesTest.Count Attribute Values for Each class" />
       <item itemvalue="ScalaTest.NaiveBayesTest.Calculate Conditional Propabilities For Each Class" />
+      <item itemvalue="ScalaTest.NaiveBayesTest.Calc Class Values with Conditional Propablilities" />
+      <item itemvalue="ScalaTest.NaiveBayesTest.Find best fitting class" />
+      <item itemvalue="ScalaTest.NaiveBayesTest.apply Model One" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="ScalaTest.NaiveBayesTest.Calculate Conditional Propabilities For Each Class" />
+        <item itemvalue="ScalaTest.NaiveBayesTest.Calc Class Values with Conditional Propablilities" />
+        <item itemvalue="ScalaTest.NaiveBayesTest.apply Model One" />
+        <item itemvalue="ScalaTest.NaiveBayesTest.Find best fitting class" />
         <item itemvalue="ScalaTest.NaiveBayesTest.Calc PriorPropablities" />
-        <item itemvalue="ScalaTest.NaiveBayesTest.Count Attribute Values for Each class" />
-        <item itemvalue="ScalaTest.NaiveBayesTest.Get Attribute Values" />
-        <item itemvalue="ScalaTest.NaiveBayesTest.Get Attributes" />
+        <item itemvalue="ScalaTest.NaiveBayesTest.Calculate Conditional Propabilities For Each Class" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +187,8 @@
       <option name="presentableId" value="Default" />
       <updated>1639736420082</updated>
       <workItem from="1639736421722" duration="31031000" />
-      <workItem from="1639907607476" duration="6031000" />
+      <workItem from="1639907607476" duration="6087000" />
+      <workItem from="1640066157614" duration="30641000" />
     </task>
     <task id="LOCAL-00001" summary="backup">
       <created>1639757279310</created>
@@ -209,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639915195500</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="6 done">
+      <created>1639915253111</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639915253111</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

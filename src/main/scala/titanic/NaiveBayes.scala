@@ -126,14 +126,19 @@ object NaiveBayes {
    * @return A Map that consists of all classes (as key) and their corresponding propability
    */
   def calcClassValuesForPrediction(record:Map[String,Any], conditionalProps: Map[Any,Set[(String, Map[Any, Double])]],
-                     priorProps:Map[Any,Double]):Map[Any,Double]= ???
+                     priorProps:Map[Any,Double]):Map[Any,Double]= {
+    conditionalProps.map(x => (x._1, x._2.map(y => (y._2.filterKeys(key => record.map(z => z._2).toSet.exists(key == _)))))).map(x => (x._1, (x._2.toList.map(z => z.map(a => a._2))))).map(x => (x._1, x._2.map(y => if (y.isEmpty == true) List(0.0) else y).flatten)).map(x => (x._1, x._2.product)).map(x => (x._1, x._2 * priorProps(x._1)))
+  }
   /**
    * This function finds the class with the highest propability
    *
    * @param classProps  Map that contains the class (key) and the corresponding propability
    * @return The class wit the highest propability
    */
-  def findBestFittingClass(classProps:Map[Any,Double]):Any= ???
+  def findBestFittingClass(classProps:Map[Any,Double]):Any= {
+    //gets the key value pair with the highest value and returns the key
+    classProps.maxBy(_._2)._1
+  }
 
   /**
    * This function builds the model. It is represented as a function that maps a data record
