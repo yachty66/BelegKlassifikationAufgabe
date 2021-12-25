@@ -127,7 +127,16 @@ object NaiveBayes {
    */
   def calcClassValuesForPrediction(record:Map[String,Any], conditionalProps: Map[Any,Set[(String, Map[Any, Double])]],
                      priorProps:Map[Any,Double]):Map[Any,Double]= {
-    conditionalProps.map(x => (x._1, x._2.map(y => (y._2.filterKeys(key => record.map(z => z._2).toSet.exists(key == _)))))).map(x => (x._1, (x._2.toList.map(z => z.map(a => a._2))))).map(x => (x._1, x._2.map(y => if (y.isEmpty == true) List(0.0) else y).flatten)).map(x => (x._1, x._2.product)).map(x => (x._1, x._2 * priorProps(x._1)))
+    conditionalProps.map(x => (x._1, x._2
+      .map(y => (y._2.filterKeys(key => record
+        .map(z => z._2).toSet.exists(key == _)))))) /*if keys in map of conditionalProps not occur in record than remove this elements*/
+      .map(x => (x._1, (x._2.toList
+        .map(z => z
+          .map(a => a._2))))) /*give only values back from map for making the product out of an list later*/
+      .map(x => (x._1, x._2
+        .map(y => if (y.isEmpty == true) List(0.0) else y).flatten)) /*there are empty list which means an key from record doesn't occur that why this lists get filled with 0.0*/
+      .map(x => (x._1, x._2.product)) /*calculate the product of every list*/
+      .map(x => (x._1, x._2 * priorProps(x._1))) /*calculate final Naive Bayes with probabilities from priorProbs*/
   }
   /**
    * This function finds the class with the highest propability
@@ -190,7 +199,16 @@ object NaiveBayes {
   def calcConditionalPropabilitiesForEachClassWithSmoothing
     (data: Map[Any, Set[(String, Map[Any, Int])]],  attValues:Map[String,Set[Any]],
      classCounts:Map[Any,Int]):
-  Map[Any,Set[(String, Map[Any, Double])]] = ???
+  Map[Any,Set[(String, Map[Any, Double])]] = {
+    data.map(x => (x._1, (x._2 ++ attValues.-("class") /*concatenate sets with values*/
+      .map(x => (x._1, x._2
+        .map{y => y -> 0}.toMap)).toSet).groupBy(_._1) /*fill values with zero values*/
+      .map(x => (x._1, x._2.map(x => x._2).flatten.groupBy(_._1).mapValues(_.toList.sortBy(-_._2).head).values.toMap)))) /*sort out duplicates with zero value*/
+      .map(x => (x._1, x._2.toSet))
+      .map(x => (x._1, x._2
+        .map(y => (y._1, y._2
+          .map(z => (z._1, (z._2 + 1).toDouble / (classCounts(x._1).toDouble + attValues(y._1).size.toDouble).toDouble)))))) /*final calculation -> (occurrence value in class + 1) / (occurrence class + number of different attribute values)*/
+  }
 
   /**
    * This function builds the model using add one smoothing.
